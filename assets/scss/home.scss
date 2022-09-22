@@ -1,0 +1,21 @@
+body {
+    background: url("../images/c6bank/hero-bg-xs.webp") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: calc(100vh - 100px - 100px);
+    display: flex;
+    & > header {
+        height: 100px;
+        width: 100%;
+        display:flex;
+        button {
+            width: 290px;
+            height: 40px;
+            background: #FFE45C;
+            font-size: 0.8em;
+            border-radius: 20px;
+        }
+    }
+}
+
+/*@media ...*/

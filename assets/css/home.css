@@ -1,0 +1,1 @@
+body{background:url("../images/c6bank/hero-bg-xs.webp") no-repeat;background-size:contain;width:100%;height:calc(100vh - 100px - 100px);display:flex}body>header{height:100px;width:100%;display:flex}body>header button{width:290px;height:40px;background:#ffe45c;font-size:.8em;border-radius:20px}
