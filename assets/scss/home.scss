@@ -31,18 +31,34 @@ body {
                 }
              }
         }
-        button {
-            width: 290px;
-            height: 40px;
-            border:none;
-            text-transform: uppercase;
-            color: #333;
-            background: #FFE45C;
-            font-size: 0.8em;
-            border-radius: 20px;
-        }
     }
 }
+
+button.disabled {
+    background: none;
+    border : solid 0.5px rgba(36,36,36, 0.8);
+}
+
+button.disabled:hover {
+    background: rgba(36,36,36,0.8);
+}
+
+button {
+    width: 290px;
+    height: 40px;
+    border:none;
+    text-transform: uppercase;
+    color: #333;
+    background: linear-gradient(150deg, #FFE45C 0%, #ffc900 100%);
+    font-size: 0.8em;
+    border-radius: 20px;
+}
+button:hover {
+    background: linear-gradient(150deg, #ffe978 0%, #fbd033 100%);
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
 .jss4 .jss6 {
     fill: hsla(0, 0%, 14%, 1);
 }
@@ -68,7 +84,46 @@ body {
             line-height: 1em;
             font-weight: 300;
         }
+        h2{
+            font-weight: 300;
+        }
+        h1, h2, h3 {
+            margin: 0;
+        }
+        h3 {
+            width: 90%;
+            background: rgba(36,36,36,0.35);
+            color:  #fff;
+            font-weight: normal;
+            font-size: 0.8em;
+            line-height: 3em;
+            border-radius: 25px;
+            padding: 0 2%;
+            span {
+                //agora você é o elemento de bloco.
+                width: fit-content;
+                display: inline-block;
+                background: #006d8f;
+                padding: 0 3%;
+                border-radius: 25px;
+                line-height: 1.6em;
+            }
+        }
     }
 }
+// breakpoints, números que usamos para
+// definir em que momento muda o CSS 
+// dependendo da tela
+// smartphone - nenhuma....
+// smartphone - landscape - 576px
+// tablet - 768px
+// desktop - 992px - 1200 ou 1280px
+// desktop grande - 1400px - 1600 - 1920px
 
-/*@media ...*/
+// 768 e (992 ou 1280) são os mais usados
+@media (min-width:992px){
+    .full-banner {
+        background: url("../images/c6bank/hero-bg-desktop.webp") no-repeat;
+        background-size: cover;
+    }
+}
