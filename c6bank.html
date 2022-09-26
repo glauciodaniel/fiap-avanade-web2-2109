@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="top-site">
         <div>
             <svg class="jss6 jss12" viewBox="0 0 120 24" xmlns="http://www.w3.org/2000/svg">
                 <path clip-rule="evenodd" shape-rendering="geometricPrecision"
@@ -27,7 +27,7 @@
                 <li><a href="#">Tire suas dúvidas</a></li>
             </ul>
         </nav>
-        <button>Abra sua conta</button>
+        <button class="top-button">Abra sua conta</button>
     </header>
     <section class="full-banner">
         <div class="destak">
@@ -39,6 +39,26 @@
         </div>
     </section>
     <footer></footer>
+    <script>
+        const button = document.querySelector(".top-button");
+        const header = document.querySelector(".top-site");
+        header.style.background = 'none';
+        button.classList.add('disabled');
+
+        window.addEventListener('scroll', (e) => {
+            console.log(window.scrollY);
+
+
+            if (window.scrollY < 100) {
+                header.style.background = 'none';
+                button.classList.add('disabled');
+            } else {
+                header.style.background = '#fff';
+                button.classList.remove('disabled');
+            }
+        });
+
+    </script>
 </body>
 
 </html>

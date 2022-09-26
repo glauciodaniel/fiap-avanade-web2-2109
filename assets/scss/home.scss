@@ -83,12 +83,16 @@ button:hover {
             font-size: 4em;
             line-height: 1em;
             font-weight: 300;
+            margin-bottom: 5%;
+            margin-top: 2%;
+        }
+        h2, h3 {
+            margin: 0;
         }
         h2{
+            width: 80%;
             font-weight: 300;
-        }
-        h1, h2, h3 {
-            margin: 0;
+            margin-bottom: 5%;
         }
         h3 {
             width: 90%;
