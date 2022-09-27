@@ -60,18 +60,20 @@
                 header.style.background = 'none';
                 button.classList.add('disabled');
             } else {
-                const aArray = header.querySelectorAll("a");
+                //const aArray = header.querySelectorAll("a");
                 const logo = header.querySelector(".jss12");
 
                 if (window.scrollY >= (body.clientHeight - 800)) {
                     header.style.background = '#000';
                     logo.style.fill = "#fff";
-                    aArray.forEach(item => item.style.color = "#fff");
+                    header.classList.add("footer-link-a");
+                    // aArray.forEach(item => item.style.color = "#fff");
                 } else {
                     header.style.background = '#fff';
                     button.classList.remove('disabled');
                     logo.style.fill = "#000";
-                    aArray.forEach(item => item.style.color = "#222");
+                    header.classList.remove("footer-link-a");
+                    // aArray.forEach(item => item.style.color = "#222");
                 }
             }
         });
