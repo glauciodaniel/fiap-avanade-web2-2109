@@ -60,17 +60,24 @@
                 header.style.background = 'none';
                 button.classList.add('disabled');
             } else {
-                header.style.background = '#fff';
-                button.classList.remove('disabled');
+                const aArray = header.querySelectorAll("a");
+                const logo = header.querySelector(".jss12");
+
+                if (window.scrollY >= (body.clientHeight - 800)) {
+                    header.style.background = '#000';
+                    logo.style.fill = "#fff";
+                    aArray.forEach(item => item.style.color = "#fff");
+                } else {
+                    header.style.background = '#fff';
+                    button.classList.remove('disabled');
+                    logo.style.fill = "#000";
+                    aArray.forEach(item => item.style.color = "#222");
+                }
             }
-
         });
-
         //o tipo de função mais simples em JavaScript, são as funções de seta. Arrow Function
 // (parametros)=>{  }
 // ()=>{}
-
-
     </script>
 </body>
 
