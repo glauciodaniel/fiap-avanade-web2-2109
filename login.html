@@ -33,14 +33,16 @@
 
     <section class="full-banner-form">
         <div class="container-login">
-            <form action="cadastro2.php" method="get" class="form-login">
+            <form action="cadastro2.php" method="post" class="form-login">
                 <label for="login">
                     CPF*
-                    <input type="text" name="login" placeholder="Digite o CPF" id="login" />
+                    <input type="text" name="login" placeholder="Digite o CPF" id="login" required
+                        oninvalid="this.setCustomValidity('Preencha o campo CPF')"
+                        oninput="this.setCustomValidity('')" />
                 </label>
                 <label for="password">
                     Senha*
-                    <input type="password" name="password" placeholder="Digite a senha" id="password" />
+                    <input type="password" name="password" required placeholder="Digite a senha" id="password" />
                 </label>
                 <button type="submit">Continuar</button>
                 <p><a href="#">Esqueci a senha</a></p>
