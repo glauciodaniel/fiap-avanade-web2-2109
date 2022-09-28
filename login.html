@@ -42,7 +42,9 @@
                 </label>
                 <label for="password">
                     Senha*
-                    <input type="password" name="password" required placeholder="Digite a senha" id="password" />
+                    <input type="password" name="password" required placeholder="Digite a senha" id="password"
+                        title="A senha deve conter, ao menos uma letra minúscula, uma letra maiúscula, um número e 8 caracteres"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
                 </label>
                 <button type="submit">Continuar</button>
                 <p><a href="#">Esqueci a senha</a></p>
