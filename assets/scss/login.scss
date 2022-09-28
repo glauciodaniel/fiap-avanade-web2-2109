@@ -1,6 +1,7 @@
 .full-banner-form {
+    background: #e4e4e4;
     width:100%;
-    height: calc(100vh - 100px);
+    height: 100vh;
     display: flex;
     align-items:center;
     justify-content:center;
@@ -22,7 +23,12 @@
                     width: 100%;
                 }
             }
-            p { margin:0}
+            p { margin:0;
+                a {
+                    color: #222;
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
