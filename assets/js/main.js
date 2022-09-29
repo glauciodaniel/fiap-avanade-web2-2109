@@ -45,3 +45,14 @@ const relogio = () => {
 };
 
 setInterval(relogio, 1000);
+
+const exemplo = (x) => console.log(x);
+
+exemplo("teste");
+
+const frases = [
+  "Um banco para 20 milhões de pessoas",
+  "C6 Bank o seu banco",
+  "Cartão de Crédito sem ",
+  "",
+];
