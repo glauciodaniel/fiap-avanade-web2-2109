@@ -1,12 +1,26 @@
 //var nome; //hoisting - içar.
 
-console.log(nome, " chamando a variável usando o var");
+//console.log(nome, " chamando a variável usando o var");
 
-const nome = "Avanade";
+//const nome = "Avanade";
+
 ////////////////////////////////////////////////////////////////
 /**
  * Existem 7 tipos de erros em JavaScript
+ * ------------------------
  * SyntaxError - Escreveu alguma coisa errado.
  * ReferenceError - Chamou alguém que não existe.
- *
+ * TypeError - Erro de tipo é uma violação do JavaScript
+ * EvalError - Evite o uso do comando eval, mas se ele for inválido
+ * RangeError - Erro de intervalo, loop infinito, ou chamadas inúmeras de recursividade
+ * URIError - Erro referente a chamadas externas. Uniform Resource Identifier. httpswww.
+ * InternalError - Erro interno do JavaScript, falta de memória, processador...
  */
+
+//eval('console.log("Vai corinthians!");');
+
+escreve("Museu do Ipiranga");
+
+function escreve(x) {
+  console.log(x);
+}
