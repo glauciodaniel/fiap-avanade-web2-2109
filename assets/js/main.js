@@ -20,7 +20,28 @@
 //eval('console.log("Vai corinthians!");');
 
 escreve("Museu do Ipiranga");
-
+//função nominal.
 function escreve(x) {
   console.log(x);
 }
+
+function mudaTitulo(novoTitulo) {
+  document.querySelector("h1").innerHTML = "<i>" + novoTitulo + "</i>";
+}
+
+mudaTitulo("Vai Corinthians!");
+
+//expressão de função - function expression
+//função anônima - que não tem nome.
+const mudaTitulo2 = function (target, novoTitulo) {
+  document.querySelector(target).innerHTML = novoTitulo;
+};
+
+mudaTitulo2("h2", "Trocando subtítulo");
+
+const relogio = () => {
+  const date = new Date();
+  mudaTitulo2("h2", date.toLocaleTimeString());
+};
+
+setInterval(relogio, 1000);
