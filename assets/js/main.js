@@ -53,6 +53,22 @@ exemplo("teste");
 const frases = [
   "Um banco para 20 milhões de pessoas",
   "C6 Bank o seu banco",
-  "Cartão de Crédito sem ",
-  "",
+  "Cartão de Crédito sem anuidade",
 ];
+
+// mudaFrase("h1", frases, 4);
+// "h1" - onde;
+// frases - array;
+// 4 - segundos;
+
+const mudaFrase = (target, frases, tempo) => {
+  let total = 0;
+  setInterval(() => {
+    document.querySelector(target).innerHTML =
+      frases[total >= frases.length - 1 ? (total = 0) : (total += 1)];
+
+    console.log(total);
+  }, tempo * 1000);
+};
+// condicao?verdade:falso
+mudaFrase("h1", frases, 4);
