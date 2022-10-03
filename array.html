@@ -33,16 +33,32 @@
             border: solid 0.5px rgba(0, 0, 0, 0.3);
             color: #444;
         }
+
+        ul {
+            margin: 0;
+            display: flex;
+        }
+
+        li {
+            list-style-type: none;
+            min-width: 120px;
+            text-align: center;
+            padding: 1% 1%;
+        }
     </style>
 </head>
 
 <body>
+    <nav></nav>
+
     <h1>Veja o console do navegador</h1>
     <h2>Execute Ctrl + Shift + i </h2>
 
     <select id="carros">
         <option selected>-- Selecione --</option>
     </select>
+
+
     <script type="text/javascript" src="assets/js/array.js"></script>
 </body>
 
