@@ -99,6 +99,9 @@ const nomeArray = nomeCompleto.split(" ");
 const americanName = [nomeArray.at(-1), nomeArray[0]].join(", ");
 // GLAUCIO D S SANTOS
 // SANTOS, GLAUCIO
+const removeUm = newCarros.splice(0, 3);
+
+console.log(removeUm, "Remove um, splice");
 console.log(americanName, "Formato americano");
 console.log(newCarros, "NewCarros");
 
