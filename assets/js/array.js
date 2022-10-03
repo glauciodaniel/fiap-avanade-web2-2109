@@ -79,3 +79,37 @@ menu.forEach((value, index) => {
 });
 
 document.querySelector("nav").appendChild(ulMenu);
+/////////////////////////////////////////
+
+const newCarros = ["Corsa", "Uno", "Gol", "Palio", "Kombi", "208"];
+
+//adicionar um elemento NO FINAL do array. Push
+newCarros.push("Celta", "Monza");
+
+//adicionar um elemento NO INÍCIO do array. Unshift
+newCarros.unshift("Fusca");
+
+//remover um elemento do FINAL do array. Pop
+const ultimo = newCarros.pop(); //retorna o elemento removido
+
+const primeiro = newCarros.shift(); //retorna o elemento removido
+
+const nomeCompleto = "Glaucio Daniel Souza Santos";
+const nomeArray = nomeCompleto.split(" ");
+const americanName = [nomeArray.at(-1), nomeArray[0]].join(", ");
+// GLAUCIO D S SANTOS
+// SANTOS, GLAUCIO
+console.log(americanName, "Formato americano");
+console.log(newCarros, "NewCarros");
+
+//push, pop
+//shift, unshift
+//splice
+//split
+//join
+
+// Programação funcional
+//slice
+//map
+//filter
+//find
