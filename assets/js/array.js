@@ -20,7 +20,7 @@ carrosArray.forEach((value, key) => {
   carros.innerHTML += `<option value="${key}">${value}</option>`;
 });
 
-carrosArray.forEach((value) => console.log(value));
+//carrosArray.forEach((value) => console.log(value));
 
 const importados = [
   ["BMW", "320i", "M3", "M4", "X5", "X6", "z4 m40i"],
@@ -99,20 +99,48 @@ const nomeArray = nomeCompleto.split(" ");
 const americanName = [nomeArray.at(-1), nomeArray[0]].join(", ");
 // GLAUCIO D S SANTOS
 // SANTOS, GLAUCIO
-const removeUm = newCarros.splice(0, 3);
+const removeTres = newCarros.splice(0, 3);
 
-console.log(removeUm, "Remove um, splice");
-console.log(americanName, "Formato americano");
-console.log(newCarros, "NewCarros");
+console.log(removeTres, "Remove três itens a partir do índice 0");
+//console.log(americanName, "Formato americano");
+//console.log(newCarros, "NewCarros");
+console.log("------------------------------------------");
 
+const frutas = ["Banana", "Maçã", "Pera", "Uva", "Melancia"];
+
+const primeiras = frutas.slice(3); //copia o array
+console.log(frutas, " slice o array original não muda");
+console.log(
+  primeiras,
+  "slice - a partir da primeira posição até a terceira que no caso é o índice 2"
+);
 //push, pop
 //shift, unshift
 //splice
 //split
 //join
-
-// Programação funcional
+console.log("------------------------------------------");
+// Programação funcional - imutabilidade, os dados não mudam. O array original não é alterado.
+// slice - copia o array.
 //slice
+const filtro = function (item) {
+  return item === "Pera" || item === "Maçã";
+  //return item.toLowerCase();
+};
+
+// console.log(filtro("Pera"));
+const frutasMap = frutas.map(filtro); // map - retorna um novo array. Do início ao fim.
+const frutasFilter = frutas.filter(filtro); // filter - retorna um novo array. Filtrando apenas true.
+const frutasFind = frutas.find(filtro); // find - retorna a primeira ocorrência que for true.
+
+console.log(frutasFind);
+
+//const ages = []
+// três Funções
+// map - classifique. 19 - adulto. - mapAge
+// filter - retorne somente os adultos. - filterAge
+// find - encontre o primeiro idoso. - findAge
+
 //map
 //filter
 //find
