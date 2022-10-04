@@ -135,7 +135,33 @@ const frutasFind = frutas.find(filtro); // find - retorna a primeira ocorrência
 
 console.log(frutasFind);
 
-//const ages = []
+const ages = [
+  12, 4, 50, 26, 32, 1, 5, 7, 9, 65, 11, 84, 14, 98, 16, 17, 18, 19,
+];
+
+const agesFilter = ages.filter((age) => age >= 18 && age <= 60);
+
+console.log(agesFilter, "adulto");
+
+const agesMap = ages.map((age) => {
+  if (age >= 0 && age <= 2) {
+    return "bebê";
+  } else if (age >= 3 && age <= 11) {
+    return "criança";
+  } else if (age >= 12 && age <= 17) {
+    return "adolescente";
+  } else if (age >= 18 && age <= 60) {
+    return "adulto";
+  } else {
+    return "idoso";
+  }
+});
+console.log(agesMap, "agesMap");
+
+const agesFind = ages.find((age) => age > 60);
+
+console.log(agesFind, "idoso");
+
 // três Funções
 // map - classifique. 19 - adulto. - mapAge
 // filter - retorne somente os adultos. - filterAge
