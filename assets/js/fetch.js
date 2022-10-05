@@ -1,6 +1,6 @@
 const cep = document.querySelector("#cep");
 
-const showData = (result) => {
+const showData = async (result) => {
   for (const campo in result) {
     if (document.querySelector("#" + campo)) {
       document.querySelector("#" + campo).value = result[campo];
@@ -8,27 +8,27 @@ const showData = (result) => {
   }
 };
 
-//o evento blur significa que clicamos na caixa de texto e saímos dela.
 cep.addEventListener("blur", async (e) => {
   let search = cep.value.replace("-", "");
-  if (search < 8 || Number(search) === NaN) {
-    alert("CEP inválido");
+  console.log(Number(search));
+  if (search.length < 8 || isNaN(search)) {
+    alert("Cep inválido");
+    cep.value = "";
     return;
   }
-  const options = {
+
+  //cors - Cross Origin Resource Sharing
+  const chocolate = {
     method: "GET",
     mode: "cors",
     cache: "default",
   };
 
-  //Promise é uma intenção.
   const resultado = await fetch(
     `https://viacep.com.br/ws/${search}/json/`,
-    options
+    chocolate
   );
   const json = await resultado.json();
 
   showData(json);
 });
-
-// async/await

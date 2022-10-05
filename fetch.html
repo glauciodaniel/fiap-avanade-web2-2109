@@ -5,50 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultando CEP</title>
-
+    <title>CEP - consultando CEP</title>
     <style>
         form {
-            width: 400px;
+            width: 420px;
             display: flex;
             flex-direction: column;
-            font-family: 'Open Sans', sans-serif;
         }
 
         label {
             display: flex;
             flex-direction: column;
             margin-top: 5%;
+            font-family: 'Open Sans', sans-serif;
         }
 
         input {
-            border: solid 0.5px #ddd;
+            width: 100%;
             height: 50px;
             line-height: 50px;
-            width: 100%;
+            border: solid 0.5px #ddd;
             border-radius: 10px;
             padding-left: 10%;
-            outline: aqua;
+            outline-color: aqua;
             font-size: 1.5em;
         }
     </style>
-
 </head>
 
 <body>
     <form>
         <label>
-            Digite o CEP:
-            <input type="text" id="cep" maxlength="9" required pattern="^\d{5}-?\d{3}$" />
+            CEP
+            <input type="text" id="cep" pattern="^\d{5}-?\d{3}$" />
         </label>
-
         <label>
-            Endereço*
+            Logradouro
             <input type="text" id="logradouro" />
         </label>
-
         <label>
-            numero
+            Número
             <input type="text" id="numero" />
         </label>
         <label>
@@ -69,7 +65,6 @@
         </label>
     </form>
 
-    <div id="resultado"></div>
     <script type="text/javascript" src="assets/js/fetch.js"></script>
 </body>
 
